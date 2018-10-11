@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+  h1 Sign up
+  .row
+    .col-md-6.col-md-offset-3
+      form.new_user#new_user(accept-charset='UTF-8', action='/users', method='post')
+        //- TODO: authenticity token
+        //- TODO: utf hidden field?
+        label(for='name') Name
+        input#name(name="name", type="text")
+        label(for='email') Email
+        input#email(name="email", type="email")
+        label(for='password') Password
+        input#password(name="password", type="password")
+        label(for='password_confirmation') Confirmation
+        input#password_confirmation(name="password_confirmation", type="password")
+        input.btn.btn-primary(name="commit", type="submit", value="Create my account")

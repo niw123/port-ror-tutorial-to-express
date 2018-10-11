@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  .center.jumbotron
+    h1 Welcome to the Sample App
+    h2 This is the home page for the #[a(href='https://expressjs.com/') Express Tutorial] sample application.
+    a(href='/signup', class='btn btn-lg btn-primary') Sign up now!
+  // TODO: find a good logo for node/express
+  //-
+    a(href='https://nodejs.org/en/'): img(src='/images/logo.svg', alt='nodejs')
